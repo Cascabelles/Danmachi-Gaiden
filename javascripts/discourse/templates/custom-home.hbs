@@ -1,34 +1,86 @@
-<div class="landing-hero">
-    <div class="container">
-        <img class="landing-logo" src="{{theme-setting 'logo_url'}}" alt="logo">
-        <h1>{{theme-setting 'hero_title'}}</h1>
-        <p class="tagline">{{theme-setting 'hero_subtitle'}}</p>
-        <div class="cta-row">
-            <a href="/latest" class="btn btn-primary">Ver últimos temas</a>
-            <a href="/categories" class="btn btn-secondary">Categorías</a>
+ï»¿<div class="indice">
+    <div class="mainBackground">
+        <div class="secondBackground">
+            <div class="thirdBackground">
+
+                {{!-- EJEMPLO de cabecera con imÃ¡genes subidas al theme y seteadas en settings --}}
+                <div class="categoria">
+                    <a href="/categories"><img src="{{theme-setting 'img_titulo_01'}}" alt="SecciÃ³n 1"></a>
+                </div>
+
+                <div class="firstSectionRow">
+                    <div class="forumnColumn2">
+                        <a href="/c/guias/1" class="link-card">
+                            <div class="forum2 forum-index index-image-shadow">
+                                <img class="index-image" src="{{theme-setting 'img_guias'}}" alt="GuÃ­as">
+                            </div>
+                            <img class="forum-title" src="{{theme-setting 'img_guias_title'}}" alt="GuÃ­as tÃ­tulo">
+                        </a>
+
+                        <div class="forumRow1">
+                            <a href="/c/anuncios/2" class="link-card">
+                                <div class="forum3 forum-index index-image-shadow">
+                                    <img class="index-image" src="{{theme-setting 'img_anuncios'}}" alt="Anuncios">
+                                </div>
+                                <img class="forum-title" src="{{theme-setting 'img_anuncios_title'}}" alt="Anuncios tÃ­tulo">
+                            </a>
+
+                            <a href="/c/biblioteca/3" class="link-card">
+                                <div class="forum4 forum-index index-image-shadow">
+                                    <img class="index-image" src="{{theme-setting 'img_biblioteca'}}" alt="Biblioteca">
+                                </div>
+                                <img class="forum-title" src="{{theme-setting 'img_biblioteca_title'}}" alt="Biblioteca tÃ­tulo">
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/c/historia/4" class="link-card">
+                        <div class="forum1 forum-index index-image-shadow">
+                            <img class="index-image" src="{{theme-setting 'img_historia'}}" alt="Historia">
+                        </div>
+                        <img class="forum-title" src="{{theme-setting 'img_historia_title'}}" alt="Historia tÃ­tulo">
+                    </a>
+                </div>
+
+                {{!-- ... puedes seguir trasladando tu estructura de secciones ... --}}
+
+                <section class="landing-latest container">
+                    <h2>Ãšltimos temas</h2>
+                    <ul id="latest-list" class="latest-list"></ul>
+                </section>
+
+                {{!-- Chatbox u otros bloques externos de MyBB no aplican; habrÃ­a que reemplazarlos por plugins o enlaces --}}
+
+            </div>
         </div>
     </div>
 </div>
 
-<section class="landing-cards container">
-    <article class="card">
-        <h3>Empezar aquí</h3>
-        <p>Lee las reglas y la guía rápida de uso.</p>
-        <a href="/t/guia-y-normas/1" class="link">Guía y normas</a>
-    </article>
-    <article class="card">
-        <h3>Presentaciones</h3>
-        <p>Preséntate a la comunidad.</p>
-        <a href="/c/presentaciones" class="link">Ir a Presentaciones</a>
-    </article>
-    <article class="card">
-        <h3>Soporte</h3>
-        <p>¿Dudas? Abre un tema en Soporte.</p>
-        <a href="/c/soporte" class="link">Ir a Soporte</a>
-    </article>
-</section>
+{{!-- PestaÃ±a y cajÃ³n de tareas (visible solo a UIDs configurados) --}}
+<div id="tasks-tab" class="tasks-tab" tabindex="0" role="button" aria-controls="tasks-drawer" aria-expanded="false">
+    Tareas
+</div>
 
-<section class="landing-latest container">
-    <h2>Últimos temas</h2>
-    <ul id="latest-list" class="latest-list"></ul>
-</section>
+<aside id="tasks-drawer" class="tasks-drawer" role="dialog" aria-modal="false" aria-labelledby="tasks-title">
+    <div class="tasks-drawer__header">
+        <h3 id="tasks-title" class="tasks-drawer__title">Tareas y accesos</h3>
+        <button id="tasks-close" class="btn btn--ghost" type="button" aria-label="Cerrar panel">âœ•</button>
+    </div>
+    <div class="tasks-drawer__body">
+        <div class="tasks-drawer__links">
+            <a href="/c/soporte">Soporte</a>
+            <a href="/c/creaciones">Creaciones</a>
+            <a href="/c/solicitudes">Solicitudes</a>
+        </div>
+        <p style="margin-top:12px;">Tareas:</p>
+        <ul>
+            <li>Revisar objetos nuevos</li>
+            <li>Actualizar guÃ­as</li>
+            <li>Responder solicitudes</li>
+        </ul>
+    </div>
+    <div class="tasks-drawer__footer">
+        <button id="tasks-dont-show-today" class="btn btn--ghost" type="button">No mostrar hoy</button>
+        <button id="tasks-open-index" class="btn btn--primary" type="button">Abrir categorÃ­as</button>
+    </div>
+</aside>

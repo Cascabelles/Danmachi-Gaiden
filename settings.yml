@@ -8,3 +8,21 @@ hero_title:
 hero_subtitle:
     default: "Esto es una prueba pruebosa"
     type: string
+tasks_visible_to_uids:
+  type: string
+  default: ""
+  description: "Lista de UIDs separados por coma que ven el cajón (vacío = todos admins/mods)."
+tasks_auto_open:
+  type: bool
+  default: true
+
+# URLs de imágenes (súbelas como assets del theme y pega aquí cada URL)
+img_titulo_01: { type: string, default: "" }
+img_guias: { type: string, default: "" }
+img_guias_title: { type: string, default: "" }
+img_anuncios: { type: string, default: "" }
+img_anuncios_title: { type: string, default: "" }
+img_biblioteca: { type: string, default: "" }
+img_biblioteca_title: { type: string, default: "" }
+img_historia: { type: string, default: "" }
+img_historia_title: { type: string, default: "" }
