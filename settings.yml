@@ -1,0 +1,10 @@
+logo_url:
+    default: ""
+    type: string
+    description: "URL del logo cuando Hitsu de digne a hacerlo el muy puto, hay que subir el asset al theme y poner la url"
+hero_title:
+    default: "Bienvenido a la comunidad"
+    type: string
+hero_subtitle:
+    default: "Esto es una prueba pruebosa"
+    type: string

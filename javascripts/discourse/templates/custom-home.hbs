@@ -1,0 +1,34 @@
+<div class="landing-hero">
+    <div class="container">
+        <img class="landing-logo" src="{{theme-setting 'logo_url'}}" alt="logo">
+        <h1>{{theme-setting 'hero_title'}}</h1>
+        <p class="tagline">{{theme-setting 'hero_subtitle'}}</p>
+        <div class="cta-row">
+            <a href="/latest" class="btn btn-primary">Ver últimos temas</a>
+            <a href="/categories" class="btn btn-secondary">Categorías</a>
+        </div>
+    </div>
+</div>
+
+<section class="landing-cards container">
+    <article class="card">
+        <h3>Empezar aquí</h3>
+        <p>Lee las reglas y la guía rápida de uso.</p>
+        <a href="/t/guia-y-normas/1" class="link">Guía y normas</a>
+    </article>
+    <article class="card">
+        <h3>Presentaciones</h3>
+        <p>Preséntate a la comunidad.</p>
+        <a href="/c/presentaciones" class="link">Ir a Presentaciones</a>
+    </article>
+    <article class="card">
+        <h3>Soporte</h3>
+        <p>¿Dudas? Abre un tema en Soporte.</p>
+        <a href="/c/soporte" class="link">Ir a Soporte</a>
+    </article>
+</section>
+
+<section class="landing-latest container">
+    <h2>Últimos temas</h2>
+    {{mount-widget widget="latest-topics" args=(hash limit=5)}}
+</section>

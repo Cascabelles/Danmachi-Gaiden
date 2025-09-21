@@ -1,0 +1,85 @@
+.landing-hero {
+    background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+    color: #fff;
+    padding: 6rem 1.5rem;
+    text-align: center;
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .landing-logo {
+        height: 72px;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin: 0.25em 0 0.5em;
+    }
+
+    .tagline {
+        opacity: 0.9;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-row {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 0.8rem 1.2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .btn-primary {
+        background: #fff;
+        color: #111827;
+    }
+
+    .btn-secondary {
+        background: rgba(255,255,255,0.18);
+        color: #fff;
+        border: 1px solid rgba(255,255,255,0.35);
+    }
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.landing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.card {
+    background: var(--secondary, #fff);
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin: 0 0 0.5rem;
+}
+
+.card .link {
+    color: var(--tertiary, #0ea5e9);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.landing-latest h2 {
+    margin: 2rem 0 1rem;
+}
