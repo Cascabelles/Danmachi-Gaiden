@@ -4,12 +4,11 @@
 # authors: Danmachi
 # url: https://danmachigaiden.com
 
-# Registra assets del cliente
+# Solo estilos; el initializer JS no se registra manualmente
 register_asset "stylesheets/guias.scss"
-register_asset "javascripts/discourse/initializers/guias.js", :client_side
 
 after_initialize do
-  # Sirve la app Ember en /guias (evita 404)
+  # Sirve la app Ember en /guias (evita 404 y permite SPA)
   Discourse::Application.routes.append do
     get "/guias" => "static#enter"
   end
