@@ -1,0 +1,7 @@
+# config/locales/client.es.yml
+es:
+  js:
+    guias:
+      title: "Guías"
+      index: "Índice de guías"
+

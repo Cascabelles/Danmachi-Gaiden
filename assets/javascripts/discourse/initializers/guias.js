@@ -76,18 +76,14 @@ export default {
 
     // arranque
     if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", onRoute);
+      document.addEventListener("DOMContentLoaded", onRoute, { once: true });
     } else {
       onRoute();
     }
 
     // SPA
-    try {
-      withPluginApi("1.8.0", (api) => {
-        api.onPageChange(() => setTimeout(onRoute, 0));
-      });
-    } catch {
-      window.addEventListener("popstate", onRoute);
-    }
+    withPluginApi("1.8.0", (api) => {
+      api.onPageChange(() => onRoute());
+    });
   },
 };
